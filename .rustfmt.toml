@@ -1,0 +1,4 @@
+license_template_path = "eng/license-header.txt"
+normalize_comments = true
+normalize_doc_attributes = true
+tab_spaces = 4

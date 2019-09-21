@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.toml": "ini"
+    },
+    "[rust]": {
+        "editor.formatOnSave": true
+    }
+}
