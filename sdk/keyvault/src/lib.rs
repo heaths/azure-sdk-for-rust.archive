@@ -3,7 +3,5 @@
 
 #![allow(dead_code)]
 
-mod secrets;
-
 #[cfg(feature = "secrets")]
-pub use secrets::SecretClient;
+pub mod secrets;
