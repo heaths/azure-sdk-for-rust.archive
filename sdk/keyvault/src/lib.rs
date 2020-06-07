@@ -1,5 +1,9 @@
 // Copyright (c) 2019 Heath Stewart.
 // Licensed under the MIT License.
 
+#![allow(dead_code)]
+
+mod secrets;
+
 #[cfg(feature = "secrets")]
-pub mod SecretClient;
+pub use secrets::SecretClient;

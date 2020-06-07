@@ -11,13 +11,13 @@ readme = "README.md"
 repository = "https://github.com/heaths/azure-sdk-for-rust"
 
 [features]
-default = []
-full = ["certificates", "keys", "secrets"]
+default = ["certificates", "keys", "secrets"]
 certificates = []
 keys = []
 secrets = []
 
 [dependencies]
+azure-core = { path="../core" }
 hyper = "0.13.6"
 tokio = { version="0.2.21", features=["macros", "stream"] }
 

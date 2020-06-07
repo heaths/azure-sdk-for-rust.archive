@@ -6,7 +6,7 @@ use chrono::{DateTime, Utc};
 use std::option::Option;
 
 /// Represents an Azure service bearer access token with expiry information.
-#[allow(dead_code)]
+#[derive(Clone)]
 pub struct AccessToken {
     /// The access token value.
     token: String,
@@ -17,7 +17,7 @@ pub struct AccessToken {
 
 /// Represents a credential capable of providing an OAuth token.
 #[async_trait]
-pub trait TokenCredential {
+pub trait TokenCredential: Clone {
     /// Gets an `AccessToken` for the specified set of scopes.
     async fn get_token(&self, scopes: &[String], parent_request_id: Option<&str>) -> AccessToken;
 }
