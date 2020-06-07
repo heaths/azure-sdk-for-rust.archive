@@ -1,6 +1,6 @@
 [package]
-name = "azure-core"
-description = "Core library for Azure SDK services"
+name = "azure-keyvault"
+description = "This is the Microsoft Azure Key Vault Secrets client library"
 version = "0.1.0"
 authors = [
     "Heath Stewart <heaths@outlook.com>"
@@ -10,11 +10,15 @@ license = "MIT"
 readme = "README.md"
 repository = "https://github.com/heaths/azure-sdk-for-rust"
 
+[features]
+default = []
+full = ["certificates", "keys", "secrets"]
+certificates = []
+keys = []
+secrets = []
+
 [dependencies]
-async-trait = "0.1.35"
-chrono = "0.4.11"
 hyper = "0.13.6"
-hyper-tls = "0.4.1"
 tokio = { version="0.2.21", features=["macros", "stream"] }
 
 [badges]

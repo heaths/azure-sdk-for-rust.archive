@@ -4,5 +4,8 @@
     },
     "[rust]": {
         "editor.formatOnSave": true
-    }
+    },
+    "cSpell.words": [
+        "chrono"
+    ]
 }
